@@ -51,7 +51,7 @@
     "test:browser": "pnpm run lint:check && pnpm run build && pnpm run test:browser:types && pnpm run test && pnpm run test:package && pnpm run test:browser:package",
     "test": "pnpm run test:coverage && pnpm run test:browser:source",
     "test:watch": "TEST_SUITE=coverage TEST_BROWSER=chromium vitest --config vitest.browser.config.mts",
-    "prepare": "node scripts/prepare.mjs"
+    "release": "semantic-release"
   },
   "lint-staged": {
     "*.{js,cjs,mjs,jsx,less,md,json}": [
@@ -106,6 +106,7 @@
     "vitest": "5.0.5"
   },
   "publishConfig": {
-    "@cobbfan9:registry": "https://npm.pkg.github.com"
+    "access": "public",
+    "provenance": true
   }
 }
