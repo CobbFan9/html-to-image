@@ -4,19 +4,10 @@
   "type": "module",
   "packageManager": "pnpm@12.21.0",
   "description": "Generates an image from a DOM node using HTML5 canvas and SVG.",
-  "main": "lib/index.js",
-  "module": "es/index.js",
   "exports": {
-    ".": {
-      "types": "./lib/index.d.ts",
-      "import": "./es/index.js",
-      "require": "./lib/index.js",
-      "default": "./lib/index.js"
-    },
-    "./*": "./*"
+    ".": "./dist/index.js"
   },
-  "unpkg": "dist/html-to-image.js",
-  "types": "lib/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "LICENSE",
@@ -37,6 +28,7 @@
   "homepage": "https://github.com/CobbFan9/html-to-image#readme",
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^11.0.1",
     "@semantic-release/github": "^12.0.11",
     "@semantic-release/npm": "^13.2.0",
     "@semantic-release/release-notes-generator": "^14.1.1",
