@@ -1,7 +1,7 @@
 {
   "name": "html-to-image",
   "version": "1.11.13",
-  "packageManager": "pnpm@10.34.9",
+  "packageManager": "pnpm@12.21.0",
   "description": "Generates an image from a DOM node using HTML5 canvas and SVG.",
   "main": "lib/index.js",
   "module": "es/index.js",
