@@ -1,29 +1,26 @@
 {
-  "exclude": [
-    "node_modules",
-    "**/es",
-    "**/lib"
-  ],
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "declaration": true,
+    "target": "es2023",
+    "module": "esnext",
+    "lib": ["ES2023", "DOM"],
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "noImplicitAny": true,
-    "noEmitOnError": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+
+    "declaration": true,
+    "declarationMap": true,
+
+    "rootDir": ".",
+    "outDir": "dist",
+
+    /* Linting */
     "noUnusedLocals": true,
-    "strictNullChecks": true,
-    "resolveJsonModule": true,
-    "target": "es5",
-    "lib": [
-      "DOM",
-      "ES2020"
-    ],
-    "types": ["node"]
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": false,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "src/**/*.ts"
-  ]
+  "include": ["src"]
 }
